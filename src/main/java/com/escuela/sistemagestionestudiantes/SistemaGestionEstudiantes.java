@@ -6,24 +6,25 @@ public class SistemaGestionEstudiantes {
 
     public static void main(String[] args) {
 
-        // Creamos tres objetos de tipo Estudiante.
-        Estudiante estudiante1 = new Estudiante("Juan", "A001", 20, 85.5);
-        Estudiante estudiante2 = new Estudiante("Maria", "A002", 19, 95.0);
-        Estudiante estudiante3 = new Estudiante("Pedro", "A003", 21, 60.0);
+        // Creamos un estudiante presencial.
+        EstudiantePresencial estudiante1 = new EstudiantePresencial(
+                "Carlos", "P001", 20, 90.0, "Salon 204");
 
-        // Mostramos la informacion del primer estudiante.
-        System.out.println("=== ESTUDIANTE 1 ===");
+        // Creamos un estudiante en linea.
+        EstudianteEnLinea estudiante2 = new EstudianteEnLinea(
+                "Ana", "L001", 19, 95.0, "Google Classroom");
+
+        // Mostramos los datos del estudiante presencial.
+        System.out.println("=== ESTUDIANTE PRESENCIAL ===");
         estudiante1.mostrarDatos();
         estudiante1.verificarAprobacion();
+        estudiante1.mostrarSalon();
 
-        // Mostramos la informacion del segundo estudiante.
-        System.out.println("\n=== ESTUDIANTE 2 ===");
+        // Mostramos los datos del estudiante en linea.
+        System.out.println("\n=== ESTUDIANTE EN LINEA ===");
         estudiante2.mostrarDatos();
         estudiante2.verificarAprobacion();
+        estudiante2.mostrarPlataforma();
 
-        // Mostramos la informacion del tercer estudiante.
-        System.out.println("\n=== ESTUDIANTE 3 ===");
-        estudiante3.mostrarDatos();
-        estudiante3.verificarAprobacion();
     }
 }
